@@ -1,0 +1,35 @@
+{
+    "name" : "LSZLG",
+
+    "description" : "A batch of highly alternative random map templates.",
+    "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
+    "author" : "LastSpy",
+
+    "contact" : "LastSpy",
+
+    "modType" : "Templates",
+    
+    "templates" : 
+	[ 
+ 	    "50_LSZLG.JSON"
+	],
+	
+	"version" : "1.0",
+ 
+    "changelog" :
+    {
+        "1.0"    : [ "initial release"]
+    },
+
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},
+	
+    "keepDisabled" : false,
+    
+	"chinese" : {
+    	"name" : "LSZLG",
+    	"description" : "一批可高度定制的随机地图模板。"
+    }
+}

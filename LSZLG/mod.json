@@ -1,0 +1,16 @@
+{
+    "name" : "LSZLG",
+    "description" : "Pack of LSZLG made by vcmi community",
+    "author" : "LastSpy",
+    "contact" : "https://discord.gg/JvpRVkP5FU",
+    "modType" : "Templates",	
+	"version" : "1.0.0",
+ 	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},
+    "changelog" :
+    {
+        "1.0"    : [ "Initial release with LSZLG templates"]
+    }
+}
