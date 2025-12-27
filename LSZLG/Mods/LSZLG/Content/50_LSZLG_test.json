@@ -1,0 +1,1793 @@
+{
+	"50_LSZLG_test" : {
+		"allowedWaterContent" : [
+		],
+		"connections" : [
+			{
+				 // game
+				"a" : "1",
+				 // game
+				"b" : "9",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "2",
+				 // game
+				"b" : "10",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "3",
+				 // game
+				"b" : "11",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "4",
+				 // game
+				"b" : "12",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "5",
+				 // game
+				"b" : "13",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "6",
+				 // game
+				"b" : "14",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "7",
+				 // game
+				"b" : "15",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "8",
+				 // game
+				"b" : "16",
+				"guard" : 12000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "9",
+				 // game
+				"b" : "17",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "10",
+				 // game
+				"b" : "17",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "11",
+				 // game
+				"b" : "18",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "12",
+				 // game
+				"b" : "18",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "13",
+				 // game
+				"b" : "19",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "14",
+				 // game
+				"b" : "19",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "15",
+				 // game
+				"b" : "20",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "16",
+				 // game
+				"b" : "20",
+				"guard" : 20000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "17",
+				 // game
+				"b" : "21",
+				"guard" : 30000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "18",
+				 // game
+				"b" : "21",
+				"guard" : 30000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "19",
+				 // game
+				"b" : "22",
+				"guard" : 30000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "20",
+				 // game
+				"b" : "22",
+				"guard" : 30000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "21",
+				 // game
+				"b" : "23",
+				"guard" : 45000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "22",
+				 // game
+				"b" : "23",
+				"guard" : 45000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "24",
+				 // game
+				"b" : "1",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "25",
+				 // game
+				"b" : "1",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "26",
+				 // game
+				"b" : "2",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "27",
+				 // game
+				"b" : "2",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "28",
+				 // game
+				"b" : "3",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "29",
+				 // game
+				"b" : "3",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "30",
+				 // game
+				"b" : "4",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "31",
+				 // game
+				"b" : "4",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "32",
+				 // game
+				"b" : "5",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "33",
+				 // game
+				"b" : "5",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "34",
+				 // game
+				"b" : "6",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "35",
+				 // game
+				"b" : "6",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "36",
+				 // game
+				"b" : "7",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "37",
+				 // game
+				"b" : "7",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "38",
+				 // game
+				"b" : "8",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "39",
+				 // game
+				"b" : "8",
+				"guard" : 6000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "23",
+				 // game
+				"b" : "40",
+				"guard" : 50000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "23",
+				 // game
+				"b" : "41",
+				"guard" : 50000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "40",
+				 // game
+				"b" : "42",
+				"guard" : 60000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "41",
+				 // game
+				"b" : "42",
+				"guard" : 60000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "42",
+				 // game
+				"b" : "43",
+				"guard" : 70000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "42",
+				 // game
+				"b" : "44",
+				"guard" : 70000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "43",
+				 // game
+				"b" : "45",
+				"guard" : 80000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "44",
+				 // game
+				"b" : "45",
+				"guard" : 80000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "45",
+				 // game
+				"b" : "46",
+				"guard" : 90000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "45",
+				 // game
+				"b" : "47",
+				"guard" : 90000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "21",
+				 // game
+				"b" : "48",
+				"guard" : 55000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "22",
+				 // game
+				"b" : "48",
+				"guard" : 55000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "48",
+				 // game
+				"b" : "49",
+				"guard" : 65000,
+				"road" : "random",
+				"type" : "guarded"
+			},
+			{
+				 // game
+				"a" : "23",
+				 // game
+				"b" : "49",
+				"guard" : 65000,
+				"road" : "random",
+				"type" : "guarded"
+			}
+		],
+		 // game
+		"humans" : "1-8",
+		 // game
+		"maxSize" : "g+u",
+		 // game
+		"minSize" : "g+u",
+		 // game
+		"name" : "50_LSZLG_test",
+		 // game
+		"players" : "2-8",
+		"zones" : {
+			"1" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 0,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : -320,
+				"visiblePositionY" : 420,
+				"visibleSize" : 1
+			},
+			"10" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 440,
+				"visiblePositionY" : 100,
+				"visibleSize" : 1
+			},
+			"11" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 880,
+				"visiblePositionY" : -800,
+				"visibleSize" : 1
+			},
+			"12" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 210,
+				"visiblePositionY" : -540,
+				"visibleSize" : 1
+			},
+			"13" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 1070,
+				"visiblePositionY" : 0,
+				"visibleSize" : 1
+			},
+			"14" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 1440,
+				"visiblePositionY" : 380,
+				"visibleSize" : 1
+			},
+			"15" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 180,
+				"visiblePositionY" : 20,
+				"visibleSize" : 1
+			},
+			"16" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : -1210,
+				"visiblePositionY" : -70,
+				"visibleSize" : 1
+			},
+			"17" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 40000,
+						"min" : 30000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -280,
+				"visiblePositionY" : -30,
+				"visibleSize" : 1
+			},
+			"18" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 40000,
+						"min" : 30000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 790,
+				"visiblePositionY" : -560,
+				"visibleSize" : 1
+			},
+			"19" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 40000,
+						"min" : 30000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 1440,
+				"visiblePositionY" : -20,
+				"visibleSize" : 1
+			},
+			"2" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 1,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : 420,
+				"visiblePositionY" : 330,
+				"visibleSize" : 1
+			},
+			"20" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 40000,
+						"min" : 30000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 190,
+				"visiblePositionY" : -180,
+				"visibleSize" : 1
+			},
+			"21" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 50000,
+						"min" : 40000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 390,
+				"visiblePositionY" : -410,
+				"visibleSize" : 1
+			},
+			"22" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 50000,
+						"min" : 40000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : 710,
+				"visiblePositionY" : -230,
+				"visibleSize" : 1
+			},
+			"23" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 40000,
+						"min" : 30000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -20,
+				"visiblePositionY" : -340,
+				"visibleSize" : 1
+			},
+			"24" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -200,
+				"visiblePositionY" : 190,
+				"visibleSize" : 1
+			},
+			"25" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -50,
+				"visiblePositionY" : 440,
+				"visibleSize" : 1
+			},
+			"26" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 170,
+				"visiblePositionY" : 350,
+				"visibleSize" : 1
+			},
+			"27" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 420,
+				"visiblePositionY" : 600,
+				"visibleSize" : 1
+			},
+			"28" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 1370,
+				"visiblePositionY" : -580,
+				"visibleSize" : 1
+			},
+			"29" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 1510,
+				"visiblePositionY" : -850,
+				"visibleSize" : 1
+			},
+			"3" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 2,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : 1170,
+				"visiblePositionY" : -800,
+				"visibleSize" : 1
+			},
+			"30" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -710,
+				"visiblePositionY" : -840,
+				"visibleSize" : 1
+			},
+			"31" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -350,
+				"visiblePositionY" : -890,
+				"visibleSize" : 1
+			},
+			"32" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 770,
+				"visiblePositionY" : 330,
+				"visibleSize" : 1
+			},
+			"33" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 1510,
+				"visiblePositionY" : 1040,
+				"visibleSize" : 1
+			},
+			"34" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 800,
+				"visiblePositionY" : 780,
+				"visibleSize" : 1
+			},
+			"35" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 250,
+				"visiblePositionY" : 1020,
+				"visibleSize" : 1
+			},
+			"36" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 10,
+				"visiblePositionY" : 980,
+				"visibleSize" : 1
+			},
+			"37" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -770,
+				"visiblePositionY" : 1020,
+				"visibleSize" : 1
+			},
+			"38" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -1370,
+				"visiblePositionY" : -610,
+				"visibleSize" : 1
+			},
+			"39" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 5,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -1020,
+				"visiblePositionY" : -620,
+				"visibleSize" : 1
+			},
+			"4" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 3,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 5
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : -270,
+				"visiblePositionY" : -490,
+				"visibleSize" : 1
+			},
+			"40" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 60000,
+						"min" : 50000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -190,
+				"visiblePositionY" : -690,
+				"visibleSize" : 1
+			},
+			"41" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 60000,
+						"min" : 50000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -480,
+				"visiblePositionY" : -300,
+				"visibleSize" : 1
+			},
+			"42" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 10,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 70000,
+						"min" : 60000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : -800,
+				"visiblePositionY" : -570,
+				"visibleSize" : 1
+			},
+			"43" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 80000,
+						"min" : 70000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -760,
+				"visiblePositionY" : -170,
+				"visibleSize" : 1
+			},
+			"44" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 80000,
+						"min" : 70000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -1210,
+				"visiblePositionY" : 360,
+				"visibleSize" : 1
+			},
+			"45" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 10,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 90000,
+						"min" : 80000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : -800,
+				"visiblePositionY" : 370,
+				"visibleSize" : 1
+			},
+			"46" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 100000,
+						"min" : 90000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -790,
+				"visiblePositionY" : 730,
+				"visibleSize" : 1
+			},
+			"47" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 100000,
+						"min" : 90000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : -510,
+				"visiblePositionY" : 360,
+				"visibleSize" : 1
+			},
+			"48" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 15,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 65000,
+						"min" : 55000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 380,
+				"visiblePositionY" : -870,
+				"visibleSize" : 1
+			},
+			"49" : {
+				"customObjects" : {
+				},
+				"monsters" : "strong",
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 75000,
+						"min" : 65000
+					}
+				],
+				"type" : "treasure",
+				"visiblePositionX" : 60,
+				"visiblePositionY" : -860,
+				"visibleSize" : 1
+			},
+			"5" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 4,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : 1100,
+				"visiblePositionY" : 350,
+				"visibleSize" : 1
+			},
+			"6" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 5,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : 1070,
+				"visiblePositionY" : 930,
+				"visibleSize" : 1
+			},
+			"7" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 6,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : -340,
+				"visiblePositionY" : 750,
+				"visibleSize" : 1
+			},
+			"8" : {
+				"customObjects" : {
+				},
+				"mines" : {
+					"crystal" : 0,
+					"gems" : 0,
+					"gold" : 0,
+					"mercury" : 0,
+					"ore" : 1,
+					"sulfur" : 0,
+					"wood" : 1
+				},
+				"monsters" : "weak",
+				"neutralTowns" : {
+				},
+				"owner" : 7,
+				"playerTowns" : {
+					"castles" : 1
+				},
+				"size" : 25,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 1,
+						"max" : 15000,
+						"min" : 10000
+					},
+					{
+						"density" : 6,
+						"max" : 6000,
+						"min" : 3000
+					},
+					{
+						"density" : 9,
+						"max" : 3000,
+						"min" : 500
+					}
+				],
+				"type" : "playerStart",
+				"visiblePositionX" : -1210,
+				"visiblePositionY" : -470,
+				"visibleSize" : 1
+			},
+			"9" : {
+				"customObjects" : {
+				},
+				"neutralTowns" : {
+				},
+				"playerTowns" : {
+				},
+				"size" : 20,
+				"townHints" : [
+				],
+				"treasure" : [
+					{
+						"density" : 2,
+						"max" : 25000,
+						"min" : 20000
+					},
+					{
+						"density" : 4,
+						"max" : 15000,
+						"min" : 10000
+					}
+				],
+				"type" : "junction",
+				"visiblePositionX" : -540,
+				"visiblePositionY" : 130,
+				"visibleSize" : 1
+			}
+		}
+	}
+}
