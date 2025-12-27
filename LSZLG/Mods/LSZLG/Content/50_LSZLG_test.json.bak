@@ -323,288 +323,209 @@
       "10": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": -760,
         "visiblePositionY": -230,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "11": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": -420,
         "visiblePositionY": -220,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "12": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": -40,
         "visiblePositionY": -230,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "13": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": 360,
         "visiblePositionY": -240,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "14": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": 690,
         "visiblePositionY": -250,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "15": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": 1040,
         "visiblePositionY": -240,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "16": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": 1380,
         "visiblePositionY": -250,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       },
       "17": {
         "customObjects": {},
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 13,
         "townHints": [],
@@ -612,39 +533,11 @@
         "type": "junction",
         "visiblePositionX": -932,
         "visiblePositionY": 7,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "18": {
         "customObjects": {},
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 13,
         "townHints": [],
@@ -652,39 +545,11 @@
         "type": "junction",
         "visiblePositionX": -262,
         "visiblePositionY": 47,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "19": {
         "customObjects": {},
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 13,
         "townHints": [],
@@ -692,33 +557,7 @@
         "type": "junction",
         "visiblePositionX": 527,
         "visiblePositionY": 27,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "2": {
         "customObjects": {
@@ -767,49 +606,20 @@
       },
       "20": {
         "customObjects": {},
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 13,
         "townHints": [],
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ],
+        "treasure": [],
         "type": "junction",
         "visiblePositionX": 1197,
         "visiblePositionY": 37,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 0.8
       },
       "21": {
         "customObjects": {},
-        "monsters": "normal",
-        "neutralTowns": {
-          "towns": 1
-        },
+        "monsters": "strong",
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
@@ -818,39 +628,12 @@
         "type": "treasure",
         "visiblePositionX": -560,
         "visiblePositionY": 320,
-        "visibleSize": 1,
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 1
       },
       "22": {
         "customObjects": {},
-        "monsters": "normal",
-        "neutralTowns": {
-          "towns": 1
-        },
+        "monsters": "strong",
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
@@ -859,39 +642,12 @@
         "type": "treasure",
         "visiblePositionX": 830,
         "visiblePositionY": 350,
-        "visibleSize": 1,
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 1
       },
       "23": {
         "customObjects": {},
-        "monsters": "normal",
-        "neutralTowns": {
-          "towns": 1
-        },
+        "monsters": "weak",
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 15,
         "townHints": [],
@@ -899,38 +655,7 @@
         "type": "junction",
         "visiblePositionX": 170,
         "visiblePositionY": 650,
-        "visibleSize": 1,
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1,
-          "gold": 1
-        },
-        "treasure": [
-          {
-            "min": 20000,
-            "max": 30000,
-            "density": 4
-          },
-          {
-            "min": 10000,
-            "max": 20000,
-            "density": 6
-          },
-          {
-            "min": 30000,
-            "max": 60000,
-            "density": 3
-          },
-          {
-            "min": 60000,
-            "max": 150000,
-            "density": 10
-          }
-        ]
+        "visibleSize": 1
       },
       "24": {
         "customObjects": {},
@@ -947,40 +672,12 @@
         "type": "treasure",
         "visiblePositionX": -1232,
         "visiblePositionY": -572,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "25": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "terrainTypeLikeZone": 1,
@@ -990,33 +687,7 @@
         "type": "treasure",
         "visiblePositionX": -1052,
         "visiblePositionY": -572,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "26": {
         "customObjects": {},
@@ -1033,40 +704,12 @@
         "type": "treasure",
         "visiblePositionX": -862,
         "visiblePositionY": -582,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "27": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1076,33 +719,7 @@
         "type": "treasure",
         "visiblePositionX": -692,
         "visiblePositionY": -582,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "28": {
         "customObjects": {},
@@ -1119,40 +736,12 @@
         "type": "treasure",
         "visiblePositionX": -512,
         "visiblePositionY": -582,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "29": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1162,33 +751,7 @@
         "type": "treasure",
         "visiblePositionX": -332,
         "visiblePositionY": -582,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "3": {
         "customObjects": {
@@ -1250,40 +813,12 @@
         "type": "treasure",
         "visiblePositionX": -152,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "31": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1293,33 +828,7 @@
         "type": "treasure",
         "visiblePositionX": 47,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "32": {
         "customObjects": {},
@@ -1336,40 +845,12 @@
         "type": "treasure",
         "visiblePositionX": 237,
         "visiblePositionY": -582,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "33": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1379,40 +860,12 @@
         "type": "treasure",
         "visiblePositionX": 437,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "34": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1422,33 +875,7 @@
         "type": "treasure",
         "visiblePositionX": 607,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "35": {
         "customObjects": {},
@@ -1465,40 +892,12 @@
         "type": "treasure",
         "visiblePositionX": 777,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "36": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1508,33 +907,7 @@
         "type": "treasure",
         "visiblePositionX": 937,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "37": {
         "customObjects": {},
@@ -1551,40 +924,12 @@
         "type": "treasure",
         "visiblePositionX": 1127,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "38": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 23,
         "terrainTypeLikeZone": 1,
@@ -1594,33 +939,7 @@
         "type": "treasure",
         "visiblePositionX": 1287,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "39": {
         "customObjects": {},
@@ -1637,33 +956,7 @@
         "type": "treasure",
         "visiblePositionX": 1467,
         "visiblePositionY": -592,
-        "visibleSize": 0.8,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        "visibleSize": 0.8
       },
       "4": {
         "customObjects": {
@@ -1893,42 +1186,31 @@
       "9": {
         "customObjects": {},
         "minesLikeZone": 2,
-        "neutralTowns": {
-          "towns": 1
-        },
+        "neutralTowns": {},
         "playerTowns": {},
         "size": 25,
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
         "visiblePositionX": -1140,
         "visiblePositionY": -220,
-        "visibleSize": 1,
-        "monsters": "normal",
-        "mines": {
-          "wood": 1,
-          "ore": 1,
-          "mercury": 1,
-          "sulfur": 1,
-          "crystal": 1,
-          "gems": 1
-        }
+        "visibleSize": 1
       }
     }
   }
