@@ -15,10 +15,11 @@
 	    "50_LSZLG_test.JSON"
 	],
 	
-	"version" : "1.0",
+	"version" : "1.0.1",
  
     "changelog" :
     {
+		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"]
         "1.0"    : [ "initial release"]
     },
 
