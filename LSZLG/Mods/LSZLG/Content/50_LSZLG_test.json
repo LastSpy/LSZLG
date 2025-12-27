@@ -1,5 +1,5 @@
 {
-  "50_LSZLG": {
+  "50_LSZLG_test": {
     "allowedWaterContent": [],
     "connections": [
       {
@@ -272,7 +272,7 @@
     "humans": "1-8",
     "maxSize": "g+u",
     "minSize": "g+u",
-    "name": "50_LSZLG",
+    "name": "50_LSZLG_test",
     "players": "2-8",
     "zones": {
       "1": {
@@ -331,19 +331,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -371,19 +371,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -411,19 +411,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -451,19 +451,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -491,19 +491,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -531,19 +531,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -571,19 +571,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
@@ -621,24 +621,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "18": {
         "customObjects": {},
@@ -661,24 +644,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "19": {
         "customObjects": {},
@@ -701,24 +667,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "2": {
         "customObjects": {
@@ -773,23 +722,7 @@
         "playerTowns": {},
         "size": 13,
         "townHints": [],
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ],
+        "treasure": [],
         "type": "junction",
         "visiblePositionX": 1197,
         "visiblePositionY": 37,
@@ -826,24 +759,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "22": {
         "customObjects": {},
@@ -867,24 +783,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "23": {
         "customObjects": {},
@@ -956,24 +855,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "25": {
         "customObjects": {},
@@ -999,24 +881,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "26": {
         "customObjects": {},
@@ -1042,24 +907,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "27": {
         "customObjects": {},
@@ -1085,24 +933,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "28": {
         "customObjects": {},
@@ -1128,24 +959,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "29": {
         "customObjects": {},
@@ -1171,24 +985,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "3": {
         "customObjects": {
@@ -1259,24 +1056,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "31": {
         "customObjects": {},
@@ -1302,24 +1082,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "32": {
         "customObjects": {},
@@ -1345,24 +1108,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "33": {
         "customObjects": {},
@@ -1388,24 +1134,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "34": {
         "customObjects": {},
@@ -1431,24 +1160,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "35": {
         "customObjects": {},
@@ -1474,24 +1186,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "36": {
         "customObjects": {},
@@ -1517,24 +1212,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "37": {
         "customObjects": {},
@@ -1560,24 +1238,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "38": {
         "customObjects": {},
@@ -1603,24 +1264,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "39": {
         "customObjects": {},
@@ -1646,24 +1290,7 @@
           "sulfur": 1,
           "crystal": 1,
           "gems": 1
-        },
-        "treasure": [
-          {
-            "min": 3000,
-            "max": 15000,
-            "density": 7
-          },
-          {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
-          }
-        ]
+        }
       },
       "4": {
         "customObjects": {
@@ -1901,19 +1528,19 @@
         "townHints": [],
         "treasure": [
           {
-            "min": 3000,
+            "density": 1,
+            "max": 20000,
+            "min": 15000
+          },
+          {
+            "density": 2,
             "max": 15000,
-            "density": 7
+            "min": 10000
           },
           {
-            "min": 1000,
-            "max": 6000,
-            "density": 10
-          },
-          {
-            "min": 100,
-            "max": 2000,
-            "density": 14
+            "density": 3,
+            "max": 10000,
+            "min": 5000
           }
         ],
         "type": "treasure",
