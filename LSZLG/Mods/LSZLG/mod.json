@@ -11,7 +11,8 @@
     
     "templates" : 
 	[ 
- 	    "50_LSZLG.JSON"
+ 	    "50_LSZLG.JSON",
+	    "50_LSZLG_test.JSON"
 	],
 	
 	"version" : "1.0",
