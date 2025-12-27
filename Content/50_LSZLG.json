@@ -1,0 +1,113 @@
+{
+    "LSZLG": {
+        "name": "LSZLG",
+        "description": "Large map template with specific rules for VCMI.",
+        "minSize": "252x252x0",
+        "maxSize": "252x252x1",
+        "players": "2-8",
+        "humans": "1-8",
+        "bannedObjects": {
+            "azureDragonDwelling": true
+        },
+        "zones": {
+            "1": {
+                "type": "playerStart", "owner": 0, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "2": {
+                "type": "cpuStart", "owner": 1, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "3": {
+                "type": "cpuStart", "owner": 2, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "4": {
+                "type": "cpuStart", "owner": 3, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "5": {
+                "type": "cpuStart", "owner": 4, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "6": {
+                "type": "cpuStart", "owner": 5, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "7": {
+                "type": "cpuStart", "owner": 6, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "8": {
+                "type": "cpuStart", "owner": 7, "size": 25, "monsters": "weak",
+                "playerTowns": { "castles": 1 }, "mines": { "wood": 1, "ore": 1 },
+                "customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+            },
+            "9":  { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "10": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "11": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "12": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "13": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "14": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "15": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "16": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "17": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "18": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal" },
+            "19": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "20": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "21": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "22": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "23": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "24": { "type": "treasure", "size": 20, "monsters": "normal" },
+            "25": {
+                "type": "treasure", "size": 40, "monsters": "strong",
+                "treasure": [{ "min": 20000, "max": 30000, "density": 10 }],
+                "customObjects": {
+                    "commonObjects": [
+                        { "type": "rustDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } },
+                        { "type": "crystalDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } },
+                        { "type": "faerieDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } }
+                    ]
+                }
+            },
+            "26": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
+            "27": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
+            "28": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
+            "29": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "30": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "31": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "32": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "33": { "type": "junction", "size": 15, "monsters": "normal" },
+            "34": { "type": "junction", "size": 15, "monsters": "normal" },
+            "35": { "type": "junction", "size": 15, "monsters": "normal" },
+            "36": { "type": "junction", "size": 15, "monsters": "normal" }
+        },
+        "connections": [
+            { "a": "1", "b": "19", "guard": 5000 }, { "a": "2", "b": "20", "guard": 5000 },
+            { "a": "3", "b": "21", "guard": 5000 }, { "a": "4", "b": "22", "guard": 5000 },
+            { "a": "5", "b": "23", "guard": 5000 }, { "a": "6", "b": "24", "guard": 5000 },
+            { "a": "7", "b": "19", "guard": 5000 }, { "a": "8", "b": "20", "guard": 5000 },
+            { "a": "1", "b": "33", "guard": 8000 }, { "a": "2", "b": "33", "guard": 8000 },
+            { "a": "3", "b": "34", "guard": 8000 }, { "a": "4", "b": "34", "guard": 8000 },
+            { "a": "5", "b": "35", "guard": 8000 }, { "a": "6", "b": "35", "guard": 8000 },
+            { "a": "7", "b": "36", "guard": 8000 }, { "a": "8", "b": "36", "guard": 8000 },
+            { "a": "9", "b": "33", "guard": 12000 }, { "a": "10", "b": "33", "guard": 12000 },
+            { "a": "11", "b": "34", "guard": 12000 }, { "a": "12", "b": "34", "guard": 12000 },
+            { "a": "13", "b": "35", "guard": 12000 }, { "a": "14", "b": "35", "guard": 12000 },
+            { "a": "15", "b": "36", "guard": 12000 }, { "a": "16", "b": "36", "guard": 12000 },
+            { "a": "17", "b": "33", "guard": 12000 }, { "a": "18", "b": "34", "guard": 12000 },
+            { "a": "33", "b": "29", "guard": 15000 }, { "a": "34", "b": "30", "guard": 15000 },
+            { "a": "35", "b": "31", "guard": 15000 }, { "a": "36", "b": "32", "guard": 15000 },
+            { "a": "33", "b": "34", "type": "wide" }, { "a": "35", "b": "36", "type": "wide" },
+            { "a": "33", "b": "25", "guard": 40000 }, { "a": "34", "b": "26", "guard": 40000 },
+            { "a": "35", "b": "27", "guard": 40000 }, { "a": "36", "b": "28", "guard": 40000 }
+        ]
+    }
+}
