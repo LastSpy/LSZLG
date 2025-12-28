@@ -1,6 +1,6 @@
 {
-    "50_LSZLG": {
-        "name": "50_LSZLG",
+    "50_LSZLG_test": {
+        "name": "50_LSZLG_test",
         "description": "Large map template with specific rules for VCMI, based on HotA.",
         "minSize": "252x252x0",
         "maxSize": "252x252x1",
