@@ -20,7 +20,12 @@
                 "type": "playerStart", "owner": 0, "size": 25, "monsters": "weak", "townsAreSameType": true,
                 "playerTowns": { "towns": 1 },
                 "mines": { "wood": 2, "ore": 2, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1, "gold": 1 },
-                "treasure": [{ "min": 3000, "max": 6000, "density": 10 }],
+                "treasure": [
+                    { "min": 10000, "max": 15000, "density": 1 },
+                    { "min": 3000, "max": 6000, "density": 6 },
+                    { "min": 0, "max": 6000, "density": 9 },
+                    { "min": 0, "max": 500, "density": 20 }
+                ],
                 "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
             },
             "2": { "type": "playerStart", "owner": 1, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
@@ -30,7 +35,7 @@
             "6": { "type": "playerStart", "owner": 5, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
             "7": { "type": "playerStart", "owner": 6, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
             "8": { "type": "playerStart", "owner": 7, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
-            "9":  { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasure": [{ "min": 5000, "max": 8000, "density": 8 }], "mines": { "wood": 1, "ore": 1, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1 } },
+            "9":  { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasure": [ { "min": 8000, "max": 12000, "density": 2 }, { "min": 2000, "max": 5000, "density": 8 }, { "min": 0, "max": 4000, "density": 12 } ], "mines": { "wood": 1, "ore": 1, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1 } },
             "10": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
             "11": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
             "12": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
@@ -40,7 +45,7 @@
             "16": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
             "17": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
             "18": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
-            "19": { "type": "treasure", "size": 20, "monsters": "normal", "treasure": [{ "min": 4000, "max": 7000, "density": 7 }], "mines": { "wood": 1, "ore": 1 } },
+            "19": { "type": "treasure", "size": 20, "monsters": "normal", "treasure": [ { "min": 4000, "max": 7000, "density": 4 }, { "min": 1000, "max": 3000, "density": 10 } ], "mines": { "wood": 1, "ore": 1 } },
             "20": { "type": "treasure", "size": 20, "monsters": "normal", "treasureLikeZone": 19, "minesLikeZone": 19 },
             "21": { "type": "treasure", "size": 20, "monsters": "normal", "treasureLikeZone": 19, "minesLikeZone": 19 },
             "22": { "type": "treasure", "size": 20, "monsters": "normal", "treasureLikeZone": 19, "minesLikeZone": 19 },
@@ -48,7 +53,7 @@
             "24": { "type": "treasure", "size": 20, "monsters": "normal", "treasureLikeZone": 19, "minesLikeZone": 19 },
             "25": {
                 "type": "treasure", "size": 40, "monsters": "strong",
-                "treasure": [{ "min": 20000, "max": 30000, "density": 10 }],
+                "treasure": [ { "min": 20000, "max": 30000, "density": 5 }, { "min": 10000, "max": 15000, "density": 10 } ],
                 "customObjects": {
                     "commonObjects": [
                         { "type": "rustDragonDwelling", "rmg": { "value": 15000, "rarity": 5, "zoneLimit": 1, "mapLimit": 3 } },
@@ -60,7 +65,7 @@
             "26": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
             "27": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
             "28": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
-            "29": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "29": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [ { "min": 10000, "max": 15000, "density": 4 }, { "min": 5000, "max": 8000, "density": 8 } ] },
             "30": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
             "31": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
             "32": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
