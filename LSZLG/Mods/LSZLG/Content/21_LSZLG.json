@@ -1,8 +1,8 @@
 {
-	"50_LSZLG":
+	"21_LSZLG":
 	{
 		"minSize" : "xl+u", "maxSize" : "g+u",
-		"players" : "4-8", "humans" : "3-6",
+		"players" : "2-8", "humans" : "1-8",
 		"zones":
 		{
 			"1":
@@ -10,13 +10,13 @@
 				"type" : "playerStart", "size" : 30, "owner" : 1,
 				"playerTowns" : { "castles" : 1 },
 				"monsters" : "normal",
-				"mines" : {"wood" : 2, "ore" : 2, "gems" : 1, "crystal" : 1, "sulfur" : 1, "mercury" : 1, "gold" : 1},
+				"mines" : {"wood" : 1, "ore" : 1, "gold" : 1},
 				"treasure" : [
 								{"min" : 7500, "max": 15000, "density": 3},
 								{"min" : 3000, "max": 6000, "density": 6},
 								{"min" : 300, "max": 3000, "density": 8}
 							],
-				"customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true, "frozenCliffs": true } }
+				"customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
 			},
 			"2":
 			{
@@ -162,8 +162,7 @@
 								{"min" : 20000, "max": 30000, "density": 3},
 								{"min" : 10000, "max": 15000, "density": 6},
 								{"min" : 5000, "max": 10000, "density": 9}
-							],
-				"customObjects": { "bannedObjects": { "magicForest": true, "frozenCliffs": true } }
+							]
 			},
 			"18":
 			{
@@ -177,8 +176,7 @@
 								{"min" : 15000, "max": 20000, "density": 3},
 								{"min" : 7500, "max": 10000, "density": 6},
 								{"min" : 3000, "max": 6000, "density": 9}
-							],
-				"customObjectsLikeZone": 17
+							]
 			},
 			"19":
 			{
@@ -188,7 +186,6 @@
 				"monsters" : "strong",
 				"minesLikeZone" : 17,
 				"treasureLikeZone" : 17
-				"customObjectsLikeZone": 17
 			},
 			"20":
 			{
@@ -198,7 +195,6 @@
 				"monsters" : "strong",
 				"minesLikeZone" : 17,
 				"treasureLikeZone" : 18
-				"customObjectsLikeZone": 17
 			},
 			"21":
 			{
@@ -210,8 +206,7 @@
 								{"min" : 30000, "max": 50000, "density": 3},
 								{"min" : 10000, "max": 20000, "density": 6},
 								{"min" : 5000, "max": 10000, "density": 9}
-							],
-				"customObjects": { "bannedObjects": { "magicForest": true, "frozenCliffs": true } }
+							]
 			}
 		},
 		"connections" :
