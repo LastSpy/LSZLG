@@ -1,72 +1,35 @@
 {
-    "50_LSZLG_test": {
-        "name": "50_LSZLG_test",
-        "description": "Large map template with specific rules for VCMI.",
+    "50_LSZLG": {
+        "name": "50_LSZLG",
+        "description": "Large map template with specific rules for VCMI, based on HotA.",
         "minSize": "252x252x0",
         "maxSize": "252x252x1",
         "players": "2-8",
         "humans": "1-8",
-		"allowedWaterContent" : ["none", "normal", "islands"],
-		"settings" :
-		{
-			"heroes" :
-			{
-				"perPlayerOnMapCap" : 4
-			}
-		},
+        "allowedWaterContent": ["none", "normal", "islands"],
+        "settings": {
+            "heroes": {
+                "perPlayerOnMapCap": 4
+            }
+        },
         "bannedObjects": {
             "azureDragonDwelling": true
         },
         "zones": {
             "1": {
-                "type": "playerStart", "owner": 0, "size": 25, "monsters": "weak",
-                "playerTowns": { "towns": 1 }, "mines": { "wood": 2, "ore": 2, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1, "gold": 1 },
-				"treasure": [{ "min": 3000, "max": 6000, "density": 10 }],
-				"townsAreSameType" : true,
+                "type": "playerStart", "owner": 0, "size": 25, "monsters": "weak", "townsAreSameType": true,
+                "playerTowns": { "towns": 1 },
+                "mines": { "wood": 2, "ore": 2, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1, "gold": 1 },
+                "treasure": [{ "min": 3000, "max": 6000, "density": 10 }],
                 "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
             },
-            "2": {
-                "type": "cpuStart", "owner": 1, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "3": {
-                "type": "cpuStart", "owner": 2, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "4": {
-                "type": "cpuStart", "owner": 3, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "5": {
-                "type": "cpuStart", "owner": 4, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "6": {
-                "type": "cpuStart", "owner": 5, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "7": {
-                "type": "cpuStart", "owner": 6, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
-            "8": {
-                "type": "cpuStart", "owner": 7, "size": 25, "monsters": "weak",
-                "neutralTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1,
-				"townsAreSameType" : true,
-                "customObjects": { "bannedCategories": ["pandoraBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
-            },
+            "2": { "type": "playerStart", "owner": 1, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "3": { "type": "playerStart", "owner": 2, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "4": { "type": "playerStart", "owner": 3, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "5": { "type": "playerStart", "owner": 4, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "6": { "type": "playerStart", "owner": 5, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "7": { "type": "playerStart", "owner": 6, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
+            "8": { "type": "playerStart", "owner": 7, "size": 25, "monsters": "weak", "townsAreSameType": true, "playerTowns": { "towns": 1 }, "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
             "9":  { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasure": [{ "min": 5000, "max": 8000, "density": 8 }], "mines": { "wood": 1, "ore": 1, "mercury": 1, "sulfur": 1, "crystal": 1, "gems": 1 } },
             "10": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
             "11": { "type": "treasure", "size": 30, "neutralTowns": { "towns": 1 }, "monsters": "normal", "treasureLikeZone": 9, "minesLikeZone": 9 },
@@ -88,19 +51,19 @@
                 "treasure": [{ "min": 20000, "max": 30000, "density": 10 }],
                 "customObjects": {
                     "commonObjects": [
-                        { "type": "rustDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } },
-                        { "type": "crystalDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } },
-                        { "type": "faerieDragonDwelling", "rmg": { "value": 15000, "rarity": 10, "zoneLimit": 1, "mapLimit": 3 } }
+                        { "type": "rustDragonDwelling", "rmg": { "value": 15000, "rarity": 5, "zoneLimit": 1, "mapLimit": 3 } },
+                        { "type": "faerieDragonDwelling", "rmg": { "value": 15000, "rarity": 5, "zoneLimit": 1, "mapLimit": 3 } },
+                        { "type": "rubyDragonDwelling", "rmg": { "value": 15000, "rarity": 5, "zoneLimit": 1, "mapLimit": 3 } }
                     ]
                 }
             },
-            "26": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
-            "27": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
-            "28": { "type": "treasure", "size": 40, "monsters": "strong", "treasure": [{ "min": 20000, "max": 30000, "density": 10 }], "customObjectsLikeZone": 25 },
+            "26": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
+            "27": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
+            "28": { "type": "treasure", "size": 40, "monsters": "strong", "treasureLikeZone": 25, "customObjectsLikeZone": 25 },
             "29": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
-            "30": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
-            "31": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
-            "32": { "type": "treasure", "size": 30, "monsters": "normal", "treasure": [{ "min": 10000, "max": 15000, "density": 10 }] },
+            "30": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
+            "31": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
+            "32": { "type": "treasure", "size": 30, "monsters": "normal", "treasureLikeZone": 29 },
             "33": { "type": "junction", "size": 15, "monsters": "normal" },
             "34": { "type": "junction", "size": 15, "monsters": "normal" },
             "35": { "type": "junction", "size": 15, "monsters": "normal" },
