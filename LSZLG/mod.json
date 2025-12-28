@@ -4,13 +4,15 @@
     "author" : "LastSpy",
     "contact" : "https://discord.gg/JvpRVkP5FU",
     "modType" : "Templates",	
-	"version" : "1.0.0",
+	"version" : "1.1",
  	"compatibility" :
 	{
 		"min" : "1.7.0"
 	},
     "changelog" :
     {
-        "1.0"    : [ "Initial release with LSZLG templates"]
+		"1.1"	 : [ "* Old map is now 21_  * Map 50_ added  * [EXPEREMENTAL] 50_ Can create 504x504x2"]
+		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"]
+        "1.0"    : [ "initial release"]
     }
 }
