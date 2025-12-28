@@ -19,10 +19,12 @@
  
     "changelog" :
     {
-		"1.1"	 : [ "* Old map is now 21_ * Map 50_ added * [EXPEREMENTAL] 50_ Can create 504x504x2"]
+		"1.1"	 : [ "* Old map is now 21_",
+			"Map 50_ added",
+			"* [EXPEREMENTAL] 50_ Can create 504x504x2"]
 		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"]
         "1.0"    : [ "initial release"]
-    },
+    }
 
 	"compatibility" :
 	{
