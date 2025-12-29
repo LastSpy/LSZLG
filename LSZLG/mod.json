@@ -1,20 +1,23 @@
 {
     "name" : "LSZLG",
     "description" : "Pack of LSZLG made by vcmi community",
+    "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
     "author" : "LastSpy",
     "contact" : "https://discord.gg/JvpRVkP5FU",
     "modType" : "Templates",	
-	"version" : "1.1",
+	"version" : "1.1.1",
  	"compatibility" :
 	{
 		"min" : "1.7.0"
 	},
     "changelog" :
     {
+		"1.1.1"	 : [ " Fixed a minor bug in 50_LSZLG.json",
+					 "Changed treasure density by 10% on 50_LSZLG.json" ],
 		"1.1"	 : [ "* Old map is now 21_",
 			"Map 50_ added",
-			"* [EXPEREMENTAL] 50_ Can create 504x504x2"]
-		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"]
+			"* [EXPEREMENTAL] 50_ Can create 504x504x2"],
+		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"],
         "1.0"    : [ "initial release"]
     }
 }
