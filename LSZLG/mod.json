@@ -14,7 +14,7 @@
  
     "changelog" :
     {
-		"1.0.4"  : [ "Fixed problem when ping abandon the geme in day 1",
+		"1.0.4"  : [ "Fixed problem when pink abandon the geme in day 1",
 					 "Fixed Size problem for RMG"]
 		"1.0.3"	 : [ "Fixed a minor bug in 50_LSZLG.json",
 					 "Changed treasure density by 10% on 50_LSZLG.json" ],
