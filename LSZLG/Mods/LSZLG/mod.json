@@ -15,16 +15,18 @@
 	    "50_LSZLG.JSON"
 	],
 	
-	"version" : "1.1.1",
+	"version" : "1.0.4",
  
     "changelog" :
     {
-		"1.1.1"	 : [ " Fixed a minor bug in 50_LSZLG.json",
+		"1.0.4"  : [ "Fixed problem when ping abandon the geme in day 1",
+					 "Fixed Size problem for RMG"]
+		"1.0.3"	 : [ "Fixed a minor bug in 50_LSZLG.json",
 					 "Changed treasure density by 10% on 50_LSZLG.json" ],
-		"1.1"	 : [ "* Old map is now 21_",
-			"Map 50_ added",
-			"* [EXPEREMENTAL] 50_ Can create 504x504x2"],
-		"1.0.1"  : ["Added 50_LSZLG_test for testing unstable RMG"],
+		"1.0.2"	 : [ "*Old map is now 21_",
+					 "Map 50_ added",
+					 "*[EXPEREMENTAL] 50_ Can create 504x504x2"],
+		"1.0.1"  : [ "Added 50_LSZLG_test for testing unstable RMG"],
         "1.0"    : [ "initial release"]
     }
 
