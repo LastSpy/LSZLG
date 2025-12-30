@@ -13,7 +13,8 @@
 								{"min" : 1000, "max": 1500, "density": 10}
 								], 
 					"customObjects": { 
-						"bannedObjects": { "core:dragonUtopia": true, "core:pandorasBox": true, "seerHut": true } } },
+						"bannedCategories": ["pandorasBox"], 
+						"bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } } },
 			"2": { "type": "cpuStart", "size": 20, "owner": 2, "forcedLevel": "automatic", "playerTowns": { "castles": 1 }, "monsters": "normal", "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
 			"3": { "type": "cpuStart", "size": 20, "owner": 3, "forcedLevel": "automatic", "playerTowns": { "castles": 1 }, "monsters": "normal", "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
 			"4": { "type": "cpuStart", "size": 20, "owner": 4, "forcedLevel": "automatic", "playerTowns": { "castles": 1 }, "monsters": "normal", "minesLikeZone": 1, "treasureLikeZone": 1, "customObjectsLikeZone": 1 },
@@ -29,9 +30,9 @@
 								{"min" : 2000, "max": 3000, "density": 12}
 								],
 					"customObjects": { 
-						"bannedObjects": { "core:shipyard": true },
+						"bannedObjects": { "shipyard": true },
 						"commonObjects": [
-							{ "type": "core:dragonUtopia", "rmg": { "value": 10000, "rarity": 50, "zoneLimit": 2 } }
+							{ "type": "dragonUtopia", "rmg": { "value": 10000, "rarity": 50, "zoneLimit": 2 } }
 										] 
 									}	},
 			"10": { "type": "treasure", "size": 20, "forcedLevel": "surface", "monsters": "normal", "mines" : { "crystal" : 0, "gems" : 1, "gold" : 0, "mercury" : 0, "ore" : 0, "sulfur" : 0, "wood" : 1 }, "treasureLikeZone": 9, "customObjectsLikeZone": 9},
@@ -58,7 +59,7 @@
 										], 
 					"customObjects": { 
 						"commonObjects": [
-							{ "type": "core:dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
+							{ "type": "dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
 										]
 									}	},
 			"26": { "type": "treasure", "size": 15, "monsters": "strong", "allowedTowns" : ["neutral"], "mines": {"gold": 1}, "treasureLikeZone": 25, "customObjectsLikeZone": 25},
@@ -78,7 +79,7 @@
 										],
 					"customObjects": { 
 						"commonObjects": [
-							{ "type": "core:dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
+							{ "type": "dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
 										]
 									}	},
 			"35": { "type": "treasure", "size": 12, "monsters": "strong", "allowedTowns" : ["neutral"], "treasureLikeZone": 34, "customObjectsLikeZone": 34 },
@@ -98,7 +99,7 @@
 										],
 					"customObjects": { 
 						"commonObjects": [
-							{ "type": "core:dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
+							{ "type": "dragonUtopia", "rmg": { "value" : 10000, "rarity" : 50, "zoneLimit": 2 } }
 										]
 									}	},
 			"44": { "type": "junction", "size": 12, "monsters": "strong", "allowedTowns" : ["neutral"], "treasureLikeZone": 43 },
