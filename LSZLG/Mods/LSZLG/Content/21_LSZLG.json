@@ -16,7 +16,7 @@
 								{"min" : 3000, "max": 6000, "density": 6},
 								{"min" : 300, "max": 3000, "density": 8}
 							],
-				"customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "dragonUtopia": true, "seerHut": true, "randomArtifactRelic": true } }
+				"customObjects": { "bannedCategories": ["pandorasBox"], "bannedObjects": { "core:dragonUtopia": true, "core:seerHut": true, "core:randomArtifactRelic": true } }
 			},
 			"2":
 			{
