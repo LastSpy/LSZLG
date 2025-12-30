@@ -15,17 +15,19 @@
 	    "50_LSZLG.JSON"
 	],
 	
-	"version" : "1.0.4",
+	"version" : "1.0.5",
  
     "changelog" :
     {
+		"1.0.5"  : [ "* Fixed compatibility issue with 1.7.2",
+					 "* Fix 21_ loading error" ],
 		"1.0.4"  : [ "Fixed problem when pink abandon the geme in day 1",
-					 "Fixed Size problem for RMG"]
+					 "Fixed Size problem for RMG"],
 		"1.0.3"	 : [ "Fixed a minor bug in 50_LSZLG.json",
 					 "Changed treasure density by 10% on 50_LSZLG.json" ],
 		"1.0.2"	 : [ "* Old map is now 21_",
 					 "Map 50_ added",
-					 "* [EXPEREMENTAL] 50_ Can create 504x504x2"],
+					 "* [EXPERIMENTAL] 50_ Can create 504x504x2"],
 		"1.0.1"  : [ "Added 50_LSZLG_test for testing unstable RMG"],
         "1.0"    : [ "initial release"]
     }
