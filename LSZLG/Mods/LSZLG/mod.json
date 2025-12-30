@@ -30,7 +30,7 @@
 					 "* [EXPERIMENTAL] 50_ Can create 504x504x2"],
 		"1.0.1"  : [ "Added 50_LSZLG_test for testing unstable RMG"],
         "1.0"    : [ "initial release"]
-    }
+    },
 
 	"compatibility" :
 	{
