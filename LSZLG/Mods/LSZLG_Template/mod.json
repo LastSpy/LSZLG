@@ -1,5 +1,5 @@
 {
-    "name" : "LSZLG",
+    "name" : "LSZLG Templates",
 
     "description" : "A batch of highly alternative random map templates.",
     "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
