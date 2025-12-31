@@ -15,10 +15,11 @@
 	    "50_LSZLG.JSON"
 	],
 	
-	"version" : "1.0.5",
+	"version" : "1.0.6",
  
     "changelog" :
     {
+		"1.0.6"  : [ "Added new mod Random Events as dependency"],
 		"1.0.5"  : [ "* Fixed compatibility issue with 1.7.2",
 					 "* Fix 21_ loading error" ],
 		"1.0.4"  : [ "Fixed problem when pink abandon the geme in day 1",
