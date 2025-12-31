@@ -1,0 +1,20 @@
+{
+    "name": "Random Events",
+    "description": "Adds random game-wide events that are chosen at the start of a new game.",
+    "author": "LastSpy",
+    "modType": "Mechanics",
+    "scripts": {
+    "randomEventsScript": {
+      "source": "Content/Scripts/main.lua",
+      "implements": "ANYTHING"
+    }
+  },
+    "version": "1.0.0",
+        "changelog" :
+    {
+            "1.0.0"    : [ "initial release"]
+    },
+    "compatibility": {
+        "min": "1.7.0"
+  }
+}

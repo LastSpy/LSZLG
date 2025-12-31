@@ -4,8 +4,7 @@
     "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
     "author" : "LastSpy",
     "contact" : "https://discord.gg/JvpRVkP5FU",
-    "modType" : "Templates",	
-	"version" : "1.0.4",
+    "modType" : "Mechanics",	
  	"compatibility" :
 	{
 		"min" : "1.7.0"
