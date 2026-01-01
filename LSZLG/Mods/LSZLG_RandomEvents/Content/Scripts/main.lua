@@ -1,25 +1,24 @@
--- main.lua
--- Engine for the Random Events mod.
+-- main.lua (Version 3.0 - Final Path Correction)
+logError("<<<<< LSZLG_RandomEvents main.lua script started execution >>>>>")
 
--- VCMI doesn't have a reliable way to get the current mod's path,
--- so we define it here. This makes the mod more portable.
-local MOD_PATH = "Mods/LSZLG_RandomEvents/"
-
--- Load required libraries using the correct relative path.
--- Since main.lua is now in Scripts/, Libs/ is a direct subdirectory.
+-- Load libraries. Path is relative to this script's location (Content/Scripts/).
+logError("Loading libraries...")
 local json = require("Libs.json")
 local NewDay = require("events.NewDay")
 local GameMessageBox = require("ShowGameMessageBox")
+logError("Libraries loaded successfully.")
 
--- Configuration path is now inside the Content/ directory.
-local EVENTS_CONFIG_PATH = MOD_PATH .. "Content/events.json"
+-- Define the full, static path to the events file from the VCMI user data root.
+-- This path corresponds to the final file structure.
+local EVENTS_CONFIG_PATH = "Mods/LSZLG_RandomEvents/Content/events.json"
 
 -- Function to read and parse the events configuration file
 local function loadEvents()
-    logError("Attempting to load events config from: " .. EVENTS_CONFIG_PATH)
+    logError("Attempting to load events config from: '" .. EVENTS_CONFIG_PATH .. "'")
     local file, err = io.open(EVENTS_CONFIG_PATH, "r")
     if not file then
-        logError("FATAL: Could not open events config file! Error: " .. tostring(err))
+        logError("FATAL: Could not open events.json! Error: " .. tostring(err))
+        logError("Please ensure the file exists at the specified path relative to your VCMI user data directory.")
         return nil
     end
     local content = file:read("*a")
