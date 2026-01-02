@@ -1,119 +1,119 @@
-# **Комплексный анализ архитектуры скриптинга Lua и спецификаций модификаций в движке VCMI**
+# **Comprehensive analysis of the Lua scripting architecture and modification specifications in the VCMI engine**
 
-## **1\. Введение: Эволюция моддинга и роль Lua в VCMI**
+## **1\. Introduction: The evolution of modding and the role of Lua in VCMI**
 
-Проект VCMI представляет собой фундаментальную переработку движка классической стратегии *Heroes of Might and Magic III* (HoMM3), целью которой является не просто воссоздание оригинальной механики, но и преодоление жестких ограничений, накладываемых закрытой архитектурой исходного исполняемого файла. В историческом контексте моддинг HoMM3 долгое время полагался на бинарные патчи и инъекции кода в память, наиболее известным примером чего является платформа *In the Wake of Gods* (WoG) и ее скриптовый язык Event Related Model (ERM). Однако с развитием VCMI сообщество разработчиков перешло к более современной, гибкой и производительной парадигме расширения функциональности игры — использованию языка Lua.
+The VCMI project is a fundamental reworking of the engine of the classic strategy game *Heroes of Might and Magic III* (HoMM3), with the goal of not only recreating the original mechanics, but also overcoming the severe limitations imposed by the closed architecture of the original executable file. Historically, HoMM3 modding has long relied on binary patches and code injections into memory, the most famous example of which is the *In the Wake of Gods* (WoG) platform and its Event Related Model (ERM) scripting language. However, with the development of VCMI, the developer community has moved to a more modern, flexible, and productive paradigm for extending the game's functionality: the use of the Lua language.
 
-Данный отчет призван дать исчерпывающий ответ на вопросы о возможностях Lua в среде VCMI и детально разобрать обязательные требования к структуре и конфигурации модификаций. Анализ базируется на технической документации проекта, репозиториях исходного кода и обсуждениях разработчиков. Мы рассмотрим Lua не просто как инструмент для написания триггеров, а как интегральный слой, связывающий высокоуровневую логику игрового дизайна с низкоуровневой архитектурой C++ движка.
+This report aims to provide a comprehensive answer to questions about the capabilities of Lua in the VCMI environment and to analyze in detail the mandatory requirements for the structure and configuration of modifications. The analysis is based on the project's technical documentation, source code repositories, and developer discussions. We will consider Lua not just as a tool for writing triggers, but as an integral layer connecting the high-level logic of game design with the low-level architecture of the C++ engine.
 
-### **1.1 Выбор технологии: LuaJIT как основа производительности**
+### **1.1 Technology selection: LuaJIT as the basis for performance**
 
-В основе скриптовой системы VCMI лежит LuaJIT — Just-In-Time компилятор для языка Lua 5.1.1 Выбор именно этой реализации обусловлен необходимостью обеспечения высокой производительности в условиях сложных вычислений, характерных для пошаговых стратегий. В отличие от стандартных интерпретаторов, LuaJIT компилирует часто исполняемые участки байт-кода в машинный код "на лету", что позволяет скриптам выполнять ресурсоемкие задачи, такие как расчеты искусственного интеллекта (ИИ) или обработка тысяч событий на глобальной карте, без заметного падения частоты кадров.
+The VCMI scripting system is based on LuaJIT, a just-in-time compiler for the Lua 5.1.1 language. This particular implementation was chosen due to the need to ensure high performance in complex calculations typical of turn-based strategies. Unlike standard interpreters, LuaJIT compiles frequently executed sections of bytecode into machine code "on the fly," allowing scripts to perform resource-intensive tasks such as artificial intelligence (AI) calculations or processing thousands of events on a global map without a noticeable drop in frame rate.
 
-Интеграция LuaJIT предоставляет разработчикам модов доступ к обширному набору стандартных библиотек, включая математические функции (math), манипуляции со строками (string) и битовые операции (bit), что критически важно для реализации сложной игровой логики, недоступной в рамках старого формата ERM.1 Более того, архитектура VCMI позволяет загружать дополнительные модули и API через механизм require, обеспечивая модульность и повторное использование кода.2
+LuaJIT integration gives mod developers access to an extensive set of standard libraries, including math functions, string manipulation, and bitwise operations, which are critical for implementing complex game logic that was not possible with the old ERM format.1 Furthermore, the VCMI architecture allows additional modules and APIs to be loaded via the require mechanism, ensuring modularity and code reuse.
 
-### **1.2 Парадигма событийно-ориентированного программирования**
+### **1.2 Event-driven programming paradigm**
 
-Ключевым отличием подхода VCMI от предшественников является отказ от процедурной, линейной обработки скриптов в пользу событийно-ориентированной модели. В то время как старые системы часто полагались на жестко заданные номера триггеров, VCMI реализует централизованную шину событий (EVENT\_BUS). Скрипты Lua не исполняются в вакууме; они "подписываются" на конкретные события, генерируемые ядром C++.2
+The key difference between the VCMI approach and its predecessors is the rejection of procedural, linear script processing in favor of an event-driven model. While older systems often relied on hard-coded trigger numbers, VCMI implements a centralized event bus (EVENT\_BUS). Lua scripts do not run in a vacuum; they "subscribe" to specific events generated by the C++ core.2
 
-Эта модель разделяет поток управления на четкие фазы: генерация события движком, диспетчеризация через шину событий, и, наконец, исполнение подписчиков Lua. Такой подход позволяет реализовать так называемые "хуки" (hooks) — перехватчики, которые могут срабатывать как до (subscribeBefore), так и после (subscribeAfter) определенного события. Это дает модостроителям беспрецедентный контроль над игровым процессом: от отмены перемещения героя до модификации урона заклинания в момент его применения.2
+This model divides the control flow into distinct phases: event generation by the engine, dispatching via the event bus, and finally, execution by Lua subscribers. This approach allows for the implementation of so-called "hooks" — interceptors that can be triggered both before (subscribeBefore) and after (subscribeAfter) a specific event. This gives modders unprecedented control over the gameplay: from canceling a character's movement to modifying spell damage at the moment of its application.2
 
-## **2\. Функциональный потенциал: Что можно реализовать с помощью Lua?**
+## **2\. Functional potential: What can be implemented using Lua?**
 
-Отвечая на вопрос "Что я могу сделать?", следует разделить возможности Lua в VCMI на три фундаментальные области: логику карты приключений, тактические битвы и пользовательский интерфейс (UI). Каждая из этих областей предоставляет свой уникальный набор API и глобальных объектов.
+When answering the question "What can I do?", Lua's capabilities in VCMI should be divided into three fundamental areas: adventure map logic, tactical battles, and user interface (UI). Each of these areas provides its own unique set of APIs and global objects.
 
-### **2.1 Манипуляции с картой приключений и глобальной логикой**
+### **2.1 Manipulating the adventure map and global logic**
 
-Карта приключений является стратегическим слоем игры, и Lua предоставляет инструменты для полного контроля над происходящим на ней.
+The adventure map is the strategic layer of the game, and Lua provides tools for complete control over what happens on it.
 
-#### **2.1.1 Создание программируемых объектов карты**
+#### **2.1.1 Creating programmable map objects**
 
-Одной из наиболее мощных функций является возможность создания пользовательских объектов карты (Map Objects) с произвольной логикой. В отличие от стандартных объектов, чье поведение жестко закодировано в C++ (например, "взять ресурсы" или "начать битву"), скриптовый объект делегирует обработку взаимодействия Lua-скрипту.
+One of the most powerful features is the ability to create custom map objects with arbitrary logic. Unlike standard objects, whose behavior is hard-coded in C++ (e.g., "take resources" or "start battle"), a scripted object delegates interaction processing to a Lua script.
 
-Это реализуется через привязку скрипта с типом MAP\_OBJECT в конфигурационном файле. Когда герой взаимодействует с таким объектом, движок передает управление соответствующей функции Lua. Это позволяет создавать:
+This is implemented by binding a script with the MAP\_OBJECT type in the configuration file. When a hero interacts with such an object, the engine transfers control to the corresponding Lua function. This allows you to create:
 
-* **Динамические квесты:** Скрипт может проверять состояние глобальных переменных (хранящихся в таблице DATA), состав армии героя, наличие определенных артефактов или даже день недели, прежде чем выдать награду или открыть проход.  
-* **Интерактивные диалоги:** Используя возможности UI, можно создавать ветвящиеся диалоги, выбор в которых влияет на состояние мира.1
+* **Dynamic quests:** The script can check the state of global variables (stored in the DATA table), the composition of the hero's army, the presence of certain artifacts, or even the day of the week before giving a reward or opening a passage.
+* **Interactive dialogues:** Using the UI capabilities, you can create branching dialogues, the choices in which affect the state of the world.1
 
-#### **2.1.2 Управление течением времени и ресурсами**
+#### **2.1.2 Managing Time and Resources**
 
-Скрипты имеют доступ к глобальному объекту GAME, который предоставляет интерфейс IGameInfoCallback. Через этот интерфейс можно считывать и модифицировать состояние игроков, городов и героев.
+Scripts have access to the global GAME object, which provides the IGameInfoCallback interface. Through this interface, you can read and modify the status of players, cities, and heroes.
 
-* **События начала хода:** Подписавшись на событие PlayerGotTurn, мод может реализовать сложные экономические механики, например, начисление процентов на золото в казне или динамическое изменение прироста существ в зависимости от контролируемых территорий.2  
-* **Глобальные переменные:** Таблица DATA позволяет сохранять состояние между игровыми сессиями, что делает возможным создание длинных сюжетных кампаний, где решения, принятые в одной миссии, влияют на следующие.1
+* **Turn start events:** By subscribing to the PlayerGotTurn event, a mod can implement complex economic mechanics, such as calculating interest on gold in the treasury or dynamically changing creature growth depending on controlled territories.2  
+* **Global variables:** The DATA table allows you to save the state between game sessions, making it possible to create long story campaigns where decisions made in one mission affect the next.1
 
-### **2.2 Тактические битвы и боевая магия**
+### **2.2 Tactical battles and combat magic**
 
-Боевой режим в VCMI отделен от карты приключений, и для взаимодействия с ним используется глобальный объект BATTLE (интерфейс IBattleInfoCallback).
+The combat mode in VCMI is separate from the adventure map, and the global BATTLE object (IBattleInfoCallback interface) is used to interact with it.
 
-#### **2.2.1 Пользовательские эффекты заклинаний**
+#### **2.2.1 Custom spell effects**
 
-Lua позволяет выходить за рамки стандартных таблиц урона. Регистрируя скрипт как BATTLE\_EFFECT, разработчик может полностью переопределить механику действия заклинания. Например, можно создать заклинание, урон которого зависит не от силы магии, а от количества пройденных целью клеток в предыдущем ходу или от морального духа армии противника.2
+Lua allows you to go beyond standard damage tables. By registering a script as BATTLE\_EFFECT, the developer can completely redefine the mechanics of a spell's action. For example, you can create a spell whose damage depends not on magic power, but on the number of cells the target has passed in the previous turn or on the morale of the enemy army.2
 
-#### **2.2.2 Взаимодействие с боевыми стеками (CArmedInstance)**
+#### **2.2.2 Interaction with combat stacks (CArmedInstance)**
 
-Каждый отряд на поле боя представлен объектом класса CArmedInstance. Скрипты могут получать доступ к этим объектам для чтения и изменения их характеристик в реальном времени. Это открывает путь для создания уникальных способностей существ (Creature Abilities).
+Each unit on the battlefield is represented by an object of the CArmedInstance class. Scripts can access these objects to read and modify their characteristics in real time. This opens the way for creating unique creature abilities.
 
-* **Пример:** Реализация способности "Вампиризм" не через жестко заданный флаг, а через скрипт, который вычисляет нанесенный урон и лечит атакующий отряд через API BATTLE.  
-* **ИИ и целеполагание:** Хотя полноценное переписывание боевого ИИ на Lua может быть ограничено производительностью, скрипты могут влиять на оценку угроз, модифицируя параметры, которые ИИ (например, Nullkiller AI) использует для расчета приоритетов атаки.3
+* **Example:** Implementing the "Vampirism" ability not through a hard-coded flag, but through a script that calculates damage dealt and heals the attacking unit through the BATTLE API.  
+* **AI and target setting:** Although completely rewriting combat AI in Lua may be limited by performance, scripts can influence threat assessment by modifying the parameters that AI (such as Nullkiller AI) uses to calculate attack priorities.3
 
-### **2.3 Кастомизация пользовательского интерфейса (UI)**
+### **2.3 Customizing the user interface (UI)**
 
-Третьей, и одной из самых активно развивающихся областей, является система конфигурируемых виджетов (Configurable Widgets). VCMI позволяет не просто менять текстуры, а полностью перестраивать логику работы интерфейса.
+The third and one of the most actively developing areas is the Configurable Widgets system. VCMI allows you not only to change textures, but also to completely rebuild the logic of the interface.
 
-#### **2.3.1 Динамические виджеты и состояния**
+#### **2.3.1 Dynamic widgets and states**
 
-Система виджетов работает в связке JSON-конфигураций и Lua-скриптов. В JSON описывается визуальная структура (кнопки, метки, картинки), а Lua управляет их поведением.
+The widget system works in conjunction with JSON configurations and Lua scripts. JSON describes the visual structure (buttons, labels, images), while Lua controls their behavior.
 
-* **Переключение режимов:** Как показано в примере с "Шахматным таймером", интерфейс может иметь скрытые и видимые состояния. Lua-скрипт может переключать эти состояния, меняя наборы видимых виджетов без перезагрузки игры.  
-* **Событийная модель UI:** Виджеты могут генерировать события (например, нажатие кнопки), которые перехватываются Lua-скриптами для выполнения игровой логики. Это позволяет создавать полностью кастомные окна городов, меню настроек или энциклопедии внутри игры.4
+* **Mode switching:** As shown in the "Chess Timer" example, the interface can have hidden and visible states. A Lua script can switch between these states, changing the sets of visible widgets without restarting the game.  
+* **Event-driven UI model:** Widgets can generate events (e.g., button presses) that are intercepted by Lua scripts to execute game logic. This allows you to create fully customizable city windows, settings menus, or in-game encyclopedias.4
 
-## **3\. Архитектурные требования: Структура и Конфигурация**
+## **3\. Architectural Requirements: Structure and Configuration**
 
-Ответ на вторую часть вопроса пользователя — "нужно будет соблюдать какие-то пункты (структура, конфиги)?" — является утвердительным и требует детального разбора. VCMI накладывает строгие требования к файловой структуре и формату метаданных, без соблюдения которых мод не будет загружен движком.
+The answer to the second part of the user's question — "will it be necessary to comply with any requirements (structure, configuration)?" — is affirmative and requires detailed analysis. VCMI imposes strict requirements on the file structure and metadata format, without which the mod will not be loaded by the engine.
 
-### **3.1 Иерархия файловой системы модификации**
+### **3.1 Modification file system hierarchy**
 
-Каждая модификация в VCMI должна быть изолирована в собственной директории внутри папки Mods/. Движок использует рекурсивное сканирование и жестко заданные пути для поиска ресурсов.
+Each modification in VCMI must be isolated in its own directory within the Mods/ folder. The engine uses recursive scanning and hard-coded paths to search for resources.
 
-Типичная структура файловой системы для мода с Lua-скриптами выглядит следующим образом:
+A typical file system structure for a mod with Lua scripts looks like this:
 
 Mods/  
-└── MyModIdentifier/ \<-- Уникальный идентификатор мода (название папки)  
-├── mod.json \<-- Главный конфигурационный файл (ОБЯЗАТЕЛЕН)  
-├── content/ \<-- Корневая папка контента  
-│ ├── config/ \<-- JSON-конфигурации игровых сущностей  
-│ │ ├── widgets/ \<-- Конфиги UI виджетов (optionsTab.json и др.)  
-│ │ ├── creatures/ \<-- Конфиги новых существ  
+└── MyModIdentifier/ \<-- Unique mod identifier (folder name)  
+├── mod.json \<-- Main configuration file (MANDATORY)  
+├── content/ \<-- Root content folder  
+│ ├── config/ \<-- JSON configurations for game entities  
+│ │ ├── widgets/ \<-- UI widget configurations (optionsTab.json, etc.)  
+│ │ ├── creatures/ \<-- Configurations for new creatures  
 │ │ └──...  
-│ ├── sprites/ \<-- Графические ресурсы (.bmp,.def,.json анимации)  
-│ └── scripts/ \<-- Исходные коды Lua скриптов  
+│ ├── sprites/ \<-- Graphic resources (.bmp, .def, .json animations)  
+│ └── scripts/ \<-- Lua script source codes  
 │ ├── init.lua  
 │ ├── map\_logic.lua  
 │ └── battle\_hooks.lua  
 └──...  
-Соблюдение этой иерархии критически важно. Например, если виджеты не находятся в content/config/widgets, движок их не обнаружит и не сможет подменить стандартные интерфейсы.5
+Compliance with this hierarchy is critical. For example, if widgets are not located in content/config/widgets, the engine will not detect them and will not be able to replace the standard interfaces.5
 
-### **3.2 Спецификация файла mod.json**
+### **3.2 mod.json file specification**
 
-Файл mod.json является точкой входа для любой модификации. Он содержит метаданные и инструкции по загрузке ресурсов. Для модов, использующих Lua, этот файл выполняет двойную функцию: он описывает сам мод и регистрирует скрипты в системе.
+The mod.json file is the entry point for any modification. It contains metadata and instructions for loading resources. For mods that use Lua, this file serves a dual purpose: it describes the mod itself and registers scripts in the system.
 
-#### **3.2.1 Обязательные поля метаданных**
+#### **3.2.1 Required metadata fields**
 
-Для корректного отображения в лаунчере и разрешения зависимостей необходимо заполнить следующие поля:
+The following fields must be filled in for correct display in the launcher and to resolve dependencies:
 
-* "name": Человекочитаемое название мода.  
-* "description": Описание функционала (поддерживает базовый HTML).  
-* "author": Имя автора или команды.  
-* "version": Версия мода (например, "1.0.0").  
-* "modType": Тип модификации. Для скриптовых модов обычно используется "Mechanics", "Interface" или "Expansion".  
-* "compatibility": Объект, определяющий минимальную и максимальную поддерживаемые версии движка VCMI (например, {"min": "1.4.0"}). Это предотвращает запуск мода на несовместимых версиях API.5
+* "name": Human-readable name of the mod.
+* "description": Description of the functionality (supports basic HTML).  
+* "author": Name of the author or team.
+* "version": Version of the mod (e.g., "1.0.0").
+* "modType": Type of modification. For script mods, "Mechanics," "Interface," or "Expansion" are typically used.  
+* "compatibility": An object defining the minimum and maximum supported versions of the VCMI engine (e.g., {"min": "1.4.0"}). This prevents the mod from running on incompatible API versions.5
 
-#### **3.2.2 Регистрация скриптов**
+#### **3.2.2 Registering scripts**
 
-Просто наличие файла .lua в папке недостаточно. Движок должен знать, *как* и *когда* загружать этот скрипт. Это делается через добавление специальных объектов в mod.json.
+Simply having a .lua file in the folder is not enough. The engine needs to know *how* and *when* to load this script. This is done by adding special objects to mod.json.
 
-**Пример регистрации скрипта общего назначения:**
+**Example of registering a general-purpose script:**
 
 JSON
 
@@ -122,10 +122,10 @@ JSON
     "implements": "ANYTHING"  
 }
 
-* Поле **source** указывает относительный путь к файлу скрипта.  
-* Поле **implements** определяет контекст исполнения. Значение "ANYTHING" обычно используется для скриптов, которые запускаются при старте и висят в памяти, подписываясь на события.2
+* The **source** field specifies the relative path to the script file.  
+* The **implements** field defines the execution context. The value "ANYTHING" is usually used for scripts that run at startup and remain in memory, subscribing to events.2
 
-**Пример регистрации скрипта для объекта карты:**
+**Example of registering a script for a map object:**
 
 JSON
 
@@ -134,77 +134,77 @@ JSON
     "implements": "MAP\_OBJECT"  
 }
 
-В данном случае скрипт будет загружен и связан только с конкретным типом объектов карты, определенным в моде.2
+In this case, the script will be loaded and associated only with a specific type of map object defined in the mod.2
 
-### **3.3 Конфигурация Виджетов (Widgets JSON)**
+### **3.3 Widget Configuration (Widgets JSON)**
 
-Для модов, затрагивающих UI, конфигурация происходит в JSON-файлах внутри content/config/widgets/. Эти файлы описывают иерархию UI-элементов.
+For mods that affect the UI, configuration takes place in JSON files inside content/config/widgets/. These files describe the hierarchy of UI elements.
 
-В таблице ниже представлены основные типы виджетов и их ключевые свойства, которые необходимо задавать в конфигах:
+The table below shows the main types of widgets and their key properties that need to be specified in the configs:
 
-| Тип виджета (type) | Описание | Ключевые свойства JSON |
+| Widget type | Description | Key JSON properties |
 | :---- | :---- | :---- |
-| **label** | Текстовая метка | text, font, alignment, color |
-| **button** | Кнопка с состояниями | image, action, position |
-| **picture** | Статичное или анимированное изображение | image, position |
-| **comboBox** | Выпадающий список | items, image, text |
+| **label** | Text label | text, font, alignment, color |
+| **button** | Button with states | image, action, position |
+| **picture** | Static or animated image | image, position |
+| **comboBox** | Drop-down list | items, image, text |
 
-Особое внимание следует уделить массивам showWidgets и hideWidgets внутри блока variables. Эти массивы позволяют создавать динамический интерфейс, где видимость групп элементов переключается в зависимости от состояния переменной, управляемой Lua-скриптом.4
+Special attention should be paid to the showWidgets and hideWidgets arrays inside the variables block. These arrays allow you to create a dynamic interface where the visibility of groups of elements switches depending on the state of a variable controlled by a Lua script.4
 
-## **4\. Программная реализация: API и методы взаимодействия**
+## **4\. Software implementation: API and interaction methods**
 
-После настройки структуры и конфигурации начинается этап написания кода. Понимание доступных глобальных объектов и методов API является ключом к успешному моддингу.
+Once the structure and configuration have been set up, the code writing phase begins. Understanding the available global objects and API methods is key to successful modding.
 
-### **4.1 Глобальные пространства имен**
+### **4.1 Global Namespaces**
 
-VCMI экспортирует в среду Lua несколько глобальных таблиц, которые служат интерфейсами к C++ ядру.
+VCMI exports several global tables to the Lua environment, which serve as interfaces to the C++ core.
 
-#### **4.1.1 SERVICES: Доступ к статическим данным**
+#### **4.1.1 SERVICES: Access to static data**
 
-Глобальный объект SERVICES предоставляет доступ к неизменяемым данным игры — шаблонам существ, заклинаний, артефактов и фракций. Это "справочник", который скрипт может читать, но не изменять.
+The global SERVICES object provides access to immutable game data — templates for creatures, spells, artifacts, and factions. This is a "reference book" that the script can read but not modify.
 
-* SERVICES:creatures(): Возвращает таблицу всех типов существ.  
-* SERVICES:spells(): Возвращает таблицу всех заклинаний.  
-* SERVICES:artifacts(): Возвращает таблицу всех артефактов.  
-  Использование SERVICES необходимо, когда скрипту нужно узнать, например, базовую стоимость найма существа или уровень заклинания.1
+* SERVICES:creatures(): Returns a table of all creature types.  
+* SERVICES:spells(): Returns a table of all spells.  
+* SERVICES:artifacts(): Returns a table of all artifacts.  
+  Using SERVICES is necessary when a script needs to know, for example, the base cost of hiring a creature or the level of a spell.1
 
-#### **4.1.2 GAME: Состояние игрового мира**
+#### **4.1.2 GAME: Game world state**
 
-Объект GAME (интерфейс IGameInfoCallback) управляет текущим состоянием партии. Через него скрипты взаимодействуют с картой, игроками и городами. Это основной инструмент для скриптов типа "Mechanics" и "Maps".
+The GAME object (IGameInfoCallback interface) manages the current state of the game. Scripts use it to interact with the map, players, and cities. It is the main tool for Mechanics and Maps scripts.
 
-#### **4.1.3 BATTLE: Состояние тактической битвы**
+#### **4.1.3 BATTLE: Tactical battle state**
 
-Объект BATTLE (интерфейс IBattleInfoCallback) активен только во время боя. Он предоставляет методы для получения информации о гексагональной сетке, позициях отрядов (CArmedInstance) и очередности ходов. Попытка обратиться к BATTLE из скрипта карты приведет к ошибке.1
+The BATTLE object (IBattleInfoCallback interface) is only active during combat. It provides methods for obtaining information about the hexagonal grid, unit positions (CArmedInstance), and turn order. Attempting to access BATTLE from a map script will result in an error.1
 
-#### **4.1.4 EVENT\_BUS: Шина событий**
+#### **4.1.4 EVENT\_BUS: Event Bus**
 
-Объект EVENT\_BUS не хранит данные, а служит механизмом транспорта для сигналов. Именно этот объект передается в методы подписки (subscribe) для регистрации функций-слушателей.2
+The EVENT\_BUS object does not store data, but serves as a transport mechanism for signals. It is this object that is passed to subscribe methods to register listener functions.2
 
-### **4.2 Работа с модулями и библиотеками**
+### **4.2 Working with Modules and Libraries**
 
-VCMI поддерживает стандартную функцию Lua require, но с расширенным синтаксисом для поддержки модульности модов.
+VCMI supports the standard Lua require function, but with extended syntax to support modularity.
 
-* require("ClassName"): Загружает C++ класс и возвращает его как Lua-таблицу.  
-* require("core:path.to.module"): Загружает Lua-модуль из стандартной библиотеки VCMI (SCRIPTS/LIB).  
-* require("modName:path.to.module"): Позволяет загружать скрипты из *других* модов, если они указаны в зависимостях (depends) в mod.json. Это критически важно для создания модов-расширений или библиотек совместимости.1
+* require("ClassName"): Loads a C++ class and returns it as a Lua table.
+* require("core:path.to.module"): Loads a Lua module from the standard VCMI library (SCRIPTS/LIB).  
+* require("modName:path.to.module"): Allows loading scripts from *other* mods if they are specified in the dependencies (depends) in mod.json. This is critical for creating extension mods or compatibility libraries.1
 
-### **4.3 Управление данными и персистентность (DATA)**
+### **4.3 Data Management and Persistence (DATA)**
 
-Одной из проблем скриптинга является сохранение данных. Локальные переменные Lua живут только до перезагрузки скрипта или выхода из игры. Для хранения данных, которые должны попадать в файл сохранения (savegame), используется глобальная таблица DATA.
+One of the problems with scripting is data persistence. Local Lua variables only live until the script is reloaded or the game is exited. To store data that should be included in the savegame file, use the global DATA table.
 
-Разработчикам настоятельно рекомендуется использовать пространства имен внутри DATA (например, DATA.MyModName), чтобы избежать конфликтов имен переменных с другими модами. Таблица DATA.ERM зарезервирована для эмуляции ERM-переменных и не должна использоваться для новых скриптов без необходимости.2
+Developers are strongly encouraged to use namespaces within DATA (e.g., DATA.MyModName) to avoid variable name conflicts with other mods. The DATA.ERM table is reserved for emulating ERM variables and should not be used for new scripts unless necessary.2
 
-## **5\. Практический пример: Создание "Hello World" мода**
+## **5\. Practical example: Creating a "Hello World" mod**
 
-Для закрепления понимания структуры и конфигов, рассмотрим минимально необходимый набор действий для создания мода, выводящего сообщение при начале хода игрока.
+To reinforce your understanding of the structure and configurations, let's look at the minimum set of actions required to create a mod that displays a message at the start of the player's turn.
 
-### **Шаг 1: Создание структуры папок**
+### **Step 1: Creating the folder structure**
 
-В папке Mods создаем директорию HelloWorldMod. Внутри нее создаем папку scripts.
+In the Mods folder, create a directory called HelloWorldMod. Inside it, create a folder called scripts.
 
-### **Шаг 2: Создание файла mod.json**
+### **Step 2: Creating the mod.json file**
 
-В корне мода (Mods/HelloWorldMod/mod.json) размещаем следующий код:
+Place the following code in the root of the mod (Mods/HelloWorldMod/mod.json):
 
 JSON
 
@@ -219,79 +219,79 @@ JSON
     }  
 }
 
-### **Шаг 3: Написание скрипта Lua**
+### **Step 3: Writing the Lua script**
 
-В файле Mods/HelloWorldMod/scripts/main.lua пишем логику:
+In the Mods/HelloWorldMod/scripts/main.lua file, write the logic:
 
 Lua
 
-\-- Загружаем определение события начала хода  
+\-- Load the definition of the start of turn event  
 local PlayerGotTurn \= require("events.PlayerGotTurn")
 
-\-- Функция-обработчик  
+\-- Handler function  
 local function onTurnStart(event)  
-    \-- Логирование в консоль VCMI  
-    print("Скрипт работает: Начался новый ход\!")  
+    \-- Logging to the VCMI console  
+    print("Script running: New turn started\!")  
       
-    \-- Пример гипотетического вызова API для вывода сообщения на экран  
-    \-- (Точный метод зависит от версии API, часто используется через UI сервисы)  
-    \-- GAME:showMessage("Ход игрока ".. tostring(event.playerID))  
+    \-- Example of a hypothetical API call to display a message on the screen  
+    \-- (The exact method depends on the API version, often used via UI services)  
+    \-- GAME:showMessage("Player turn ".. tostring(event.playerID))  
 end
 
-\-- Подписываемся на событие через шину событий  
-\-- Используем subscribeAfter, чтобы действие произошло уже после внутренней инициализации хода  
+\-- Subscribe to the event via the event bus  
+\-- Use subscribeAfter to ensure that the action occurs after the internal initialization of the turn  
 PlayerGotTurn.subscribeAfter(EVENT\_BUS, onTurnStart)
 
-Этот пример демонстрирует все обязательные пункты: структуру папок, корректный JSON-манифест, импорт модуля события, создание функции и её регистрацию в шине событий.2
+This example demonstrates all the mandatory points: folder structure, correct JSON manifest, importing the event module, creating a function, and registering it in the event bus.2
 
-## **6\. Миграция с ERM и Сравнение архитектур**
+## **6\. Migration from ERM and Architecture Comparison**
 
-Для пользователей, знакомых с моддингом HoMM3 через WoG/ERM, переход на Lua в VCMI требует смены мышления.
+For users familiar with HoMM3 modding through WoG/ERM, switching to Lua in VCMI requires a change in mindset.
 
-| Характеристика | ERM (WoG) | Lua (VCMI) |
+| Feature | ERM (WoG) | Lua (VCMI) |
 | :---- | :---- | :---- |
-| **Синтаксис** | Криптический, регистровый (напр., \!\!IF:M^Msg^;) | Читаемый, высокоуровневый (напр., print("Msg")) |
-| **Триггеры** | Номерные триггеры (напр., \!?BA), возможны конфликты | Подписка на объекты событий (subscribe), изоляция модов |
-| **Объекты** | Работа с координатами и ID (CA(x,y)) | Работа с объектами и методами (Hero:addSkill()) |
-| **Память** | Глобальные массивы y, v, z переменных | Локальные переменные, таблицы, объект DATA |
+| **Syntax** | Cryptic, case-sensitive (e.g., \!IF:M^Msg^;) | Readable, high-level (e.g., print("Msg")) |
+| **Triggers** | Numbered triggers (e.g., \!?BA), conflicts possible | Subscription to event objects (subscribe), mod isolation |
+| **Objects** | Working with coordinates and IDs (CA(x,y)) | Working with objects and methods (Hero:addSkill()) |
+| **Memory** | Global arrays y, v, z variables | Local variables, tables, DATA object |
 
-VCMI поддерживает ERM через уровень совместимости, но для новых проектов настоятельно рекомендуется использовать Lua из\-за его читаемости, производительности и возможности создания сложной, структурированной логики, недоступной в ERM.9
+VCMI supports ERM through a compatibility layer, but for new projects it is strongly recommended to use Lua because of its readability, performance, and ability to create complex, structured logic that is not available in ERM.9
 
-## **7\. Разделение Клиент-Сервер и Сетевые Аспекты**
+## **7\. Client-Server Separation and Networking Aspects**
 
-Важным аспектом, который часто упускают начинающие мододелы, является клиент-серверная архитектура VCMI. Даже в одиночной игре VCMI запускает локальный сервер.
+An important aspect that novice modders often overlook is VCMI's client-server architecture. Even in single-player mode, VCMI runs a local server.
 
-* **Серверные скрипты:** Управляют логикой игры (GAME, BATTLE). Они авторитарны. Изменения состояния (ресурсы, здоровье) должны происходить здесь.  
-* **Клиентские скрипты:** Отвечают за UI и ввод пользователя. Они не имеют прямого доступа к изменению состояния игры.  
-* **Взаимодействие:** Если скрипт UI (клиент) хочет нанять существо, он не может просто добавить его в армию. Он должен отправить сетевой пакет (запрос) на сервер, а серверный скрипт должен этот запрос обработать и подтвердить. Игнорирование этого принципа — частая причина ошибок рассинхронизации (desync).11
+* **Server scripts:** Control the game logic (GAME, BATTLE). They are authoritative. State changes (resources, health) must occur here.  
+* **Client scripts:** Responsible for the UI and user input. They do not have direct access to changing the game state.  
+* ** Interaction:** If a UI script (client) wants to hire a creature, it cannot simply add it to the army. It must send a network packet (request) to the server, and the server script must process and confirm this request. Ignoring this principle is a common cause of desync errors.11
 
-## **8\. Заключение**
+## **8\. Conclusion**
 
-Интеграция Lua в VCMI открывает перед разработчиками модификаций возможности, сопоставимые с доступом к исходному коду игры. Используя Lua, можно переопределять правила боя, создавать уникальные объекты карты, внедрять RPG-системы и полностью менять интерфейс.
+The integration of Lua into VCMI opens up possibilities for mod developers comparable to access to the game's source code. Using Lua, you can redefine combat rules, create unique map objects, implement RPG systems, and completely change the interface.
 
-Для успешной реализации таких модов необходимо строго соблюдать архитектурные требования:
+For the successful implementation of such mods, it is necessary to strictly adhere to the architectural requirements:
 
-1. Следовать **структуре директорий** VCMI.  
-2. Корректно заполнять метаданные и регистрировать скрипты в **mod.json**.  
-3. Использовать **событийную модель** (EVENT\_BUS) вместо линейного исполнения.  
-4. Разделять логику на **клиентскую** (UI) и **серверную** (геймплей).
+1. Follow the VCMI **directory structure**.
+2. Correctly fill in the metadata and register scripts in **mod.json**.  
+3. Use the **event model** (EVENT\_BUS) instead of linear execution.  
+4. Separate logic into **client** (UI) and **server** (gameplay).
 
-Соблюдение этих пунктов гарантирует стабильность модификации и её совместимость с экосистемой VCMI.
+Compliance with these points guarantees the stability of the modification and its compatibility with the VCMI ecosystem.
 
 ---
 
-Использованные источники:  
-1 \- Документация VCMI Lua Scripting System и API.  
-2 \- Руководство разработчика по системе скриптов и событиям.  
-5 \- Руководство по созданию модов и mod.json.  
-4 \- Документация по конфигурируемым виджетам.  
-4 \- Примеры настройки виджетов и таймеров.  
-11 \- Обсуждение Python/Lua API и клиент-серверной архитектуры.  
-3 \- Описание классов ИИ и боевых сущностей CArmedInstance.  
-7 \- Заголовочные файлы C++ (CMap.h) описывающие интерфейсы Callback.  
-6 \- Спецификация формата файла mod.json.  
-9 \- Сравнение ERM и Lua, примеры кода.  
-8 \- Примеры синтаксиса скриптов.
+Sources used:  
+1 \- VCMI Lua Scripting System and API documentation.  
+2 \- Developer's guide to the scripting system and events.  
+5 \- Guide to creating mods and mod.json.  
+4 \- Documentation on configurable widgets.  
+4 \- Examples of widget and timer configuration.  
+11 \- Discussion of Python/Lua API and client-server architecture.  
+3 \- Description of AI classes and CArmedInstance combat entities.  
+7 - C++ header files (CMap.h) describing Callback interfaces.  
+6 - mod.json file format specification.  
+9 - Comparison of ERM and Lua, code examples.  
+8 - Script syntax examples.
 
 #### **Citētie darbi**
 
