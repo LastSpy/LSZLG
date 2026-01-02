@@ -12,10 +12,11 @@
     "templates" : 
 	[ 
  	    "21_LSZLG.JSON",
-	    "50_LSZLG.JSON"
+	    "50_LSZLG.JSON",
+		"26_LSZLG.JSON"
 	],
 	
-	"version" : "1.1",
+	"version" : "1.1.1",
  
     "changelog" :
     {
