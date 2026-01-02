@@ -1,0 +1,52 @@
+{
+    "name" : "LSZLG Templates",
+
+    "description" : "A batch of highly alternative random map templates.",
+    "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
+    "author" : "LastSpy",
+
+    "contact" : "LastSpy",
+
+    "modType" : "Templates",
+    
+    "templates" : 
+	[ 
+ 	    "21_LSZLG.JSON",
+	    "50_LSZLG.JSON",
+		"26_LSZLG.JSON"
+	],
+	
+	"version" : "1.1.1",
+ 
+    "changelog" :
+    {
+		"1.1"  : [ "Renamed mod to LSZLG Templates"],
+		"1.0.5"  : [ "* Fixed compatibility issue with 1.7.2",
+					 "* Fix 21_ loading error" ],
+		"1.0.4"  : [ "Fixed problem when pink abandon the geme in day 1",
+					 "Fixed Size problem for RMG"],
+		"1.0.3"	 : [ "Fixed a minor bug in 50_LSZLG.json",
+					 "Changed treasure density by 10% on 50_LSZLG.json" ],
+		"1.0.2"	 : [ "* Old map is now 21_",
+					 "Map 50_ added",
+					 "* [EXPERIMENTAL] 50_ Can create 504x504x2"],
+		"1.0.1"  : [ "Added 50_LSZLG_test for testing unstable RMG"],
+        "1.0"    : [ "initial release"]
+    },
+
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},
+	
+    "keepDisabled" : false,
+    
+	"chinese" : {
+    	"name" : "LSZLG 模板",
+    	"description" : "一批可高度定制的随机地图模板。"
+    },
+	"russian" : {
+		"name" : "LSZLG Шаблоны",
+		"description" : "Набор сильно изменённых шаблонов для генерации случайных карт."
+	}
+}
