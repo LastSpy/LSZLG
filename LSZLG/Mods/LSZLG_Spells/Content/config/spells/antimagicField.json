@@ -1,14 +1,27 @@
 {
-    "core:spell": {
-        "id": "antimagicField",
-        "type": "BATTLE",
+    "antimagicField": {
+        "type": "combat",
         "name": "Anti-Magic Field",
-        "school": "WATER",
+        "school": { "water": true },
         "level": 5,
         "mana": 50,
-        "description": "Creates a sphere of anti-magic on the battlefield with a radius of 2 + 1 for advanced and expert Water Magic, lasting for 1 + (Magic Power / 2) rounds.",
-        "targetType": "TILE",
+        "flags": { "indifferent": true },
+        "targetType": "LOCATION",
         "visualization": "core:dispel",
-        "script": "antimagicField"
+        "script": "antimagicField_script",
+        "levels": {
+            "none": {
+                "description": "Creates a sphere of anti-magic on the battlefield with a radius of 2 + 1 for advanced and expert Water Magic, lasting for 1 + (Magic Power / 2) rounds."
+            },
+            "basic": {
+                "description": "Creates a sphere of anti-magic on the battlefield with a radius of 2 + 1 for advanced and expert Water Magic, lasting for 1 + (Magic Power / 2) rounds."
+            },
+            "advanced": {
+                "description": "Creates a sphere of anti-magic on the battlefield with a radius of 2 + 1 for advanced and expert Water Magic, lasting for 1 + (Magic Power / 2) rounds."
+            },
+            "expert": {
+                "description": "Creates a sphere of anti-magic on the battlefield with a radius of 2 + 1 for advanced and expert Water Magic, lasting for 1 + (Magic Power / 2) rounds."
+            }
+        }
     }
 }

@@ -2,15 +2,22 @@
     "name": "LSZLG Spells",
     "description": "Adds new spells with unique mechanics.",
     "author": "LastSpy",
-    "version": "0.0.1",
+    "contact": "LastSpy",
+    "version": "0.0.9",
+    "changelog": {
+        "0.0.9": ["* Initial release"]
+    },
+    "keepDisabled": false,
     "modType": "Mechanics",
     "compatibility": {
         "min": "1.4.0"
     },
-    "scripts": {
-        "antimagicField": {
-            "source": "content/scripts/antimagicField.lua",
-            "implements": "ANYTHING"
-        }
+
+    "spells": [
+        "config/spells/antimagicField.json"
+    ],
+    "antimagicField": {
+        "type": "LUA_BATTLE_ENCHANTER",
+        "path": "scripts/antimagicField.lua"
     }
 }

@@ -5,6 +5,7 @@
 
 -- Load required engine components
 local events = {
+    BattleStarted = require("events.BattleStarted"),
     BattleSpellCast = require("events.BattleSpellCast"),
     CreatureMoved = require("events.CreatureMoved"),
     BeforeBattleSpellCast = require("events.BeforeBattleSpellCast"),
@@ -15,11 +16,15 @@ local consts = {
     Bonus = require("natives.Bonus")
 }
 
--- Initialize a safe namespace in the DATA table for our mod's persistent data
-if not DATA.LSZLG_Spells then
-    DATA.LSZLG_Spells = {}
+-- Use a local table for battle-specific data. This is cleaner than using the global DATA table.
+local battleState = {
+    antiMagicFields = {}
+}
+
+-- Handler to reset state at the beginning of each battle
+local function onBattleStarted(event)
+    battleState.antiMagicFields = {}
 end
-DATA.LSZLG_Spells.antiMagicFields = {} -- Holds active fields {casterId, hexes, duration}
 
 -- Hexagonal distance calculation
 local function getHexDistance(hexA, hexB)
@@ -46,7 +51,7 @@ end
 
 -- Check if a specific hex is inside any active anti-magic field
 local function isHexInAnyField(targetHex)
-    for _, field in ipairs(DATA.LSZLG_Spells.antiMagicFields) do
+    for _, field in ipairs(battleState.antiMagicFields) do
         for _, hex in ipairs(field.hexes) do
             if hex.x == targetHex.x and hex.y == targetHex.y then
                 return true
@@ -78,6 +83,7 @@ local function onSpellCast(event)
 
     local caster = event.caster
     local power = caster:getSpellPower()
+    -- getSkillLevel returns a NUMBER: 0 = none, 1 = basic, 2 = advanced, 3 = expert
     local waterMagicLevel = caster:getSkillLevel(consts.Skill.WATER_MAGIC)
     
     -- Calculate duration
@@ -85,15 +91,15 @@ local function onSpellCast(event)
 
     -- Calculate radius based on Water Magic skill
     local radius = 2
-    if waterMagicLevel == "ADVANCED" then
+    if waterMagicLevel == 2 then -- Advanced
         radius = 3
-    elseif waterMagicLevel == "EXPERT" then
+    elseif waterMagicLevel == 3 then -- Expert
         radius = 4
     end
 
     -- Determine target hex
     local targetHex = event.targetHex
-    if waterMagicLevel == "NONE" then
+    if waterMagicLevel == 0 then -- None
         local battleSize = BATTLE:getBattlefieldSize()
         targetHex = {
             x = math.random(0, battleSize.width - 1),
@@ -107,7 +113,7 @@ local function onSpellCast(event)
         duration = duration,
         hexes = getHexesInRadius(targetHex, radius)
     }
-    table.insert(DATA.LSZLG_Spells.antiMagicFields, newField)
+    table.insert(battleState.antiMagicFields, newField)
 
     -- Apply effect to all creatures currently in the field
     for _, creature in ipairs(BATTLE:getActiveCreatures()) do
@@ -117,8 +123,6 @@ end
 
 -- Handler for creature movement
 local function onCreatureMoved(event)
-    -- A creature's immunity status might change after any move, so we just update them all.
-    -- This is simpler and more robust than tracking old/new hexes if multiple fields exist.
     for _, creature in ipairs(BATTLE:getActiveCreatures()) do
         updateCreatureImmunity(creature)
     end
@@ -135,15 +139,14 @@ end
 local function onRoundStarted(event)
     local remainingFields = {}
     
-    -- Update durations and find expired fields
-    for _, field in ipairs(DATA.LSZLG_Spells.antiMagicFields) do
+    for _, field in ipairs(battleState.antiMagicFields) do
         field.duration = field.duration - 1
         if field.duration > 0 then
             table.insert(remainingFields, field)
         end
     end
     
-    DATA.LSZLG_Spells.antiMagicFields = remainingFields
+    battleState.antiMagicFields = remainingFields
     
     -- Update immunity for all creatures, as some fields may have expired
     for _, creature in ipairs(BATTLE:getActiveCreatures()) do
@@ -153,6 +156,7 @@ end
 
 
 -- Subscribe all handlers to the corresponding events
+events.BattleStarted.subscribeAfter(EVENT_BUS, onBattleStarted)
 events.BattleSpellCast.subscribeAfter(EVENT_BUS, onSpellCast)
 events.CreatureMoved.subscribeAfter(EVENT_BUS, onCreatureMoved)
 events.BeforeBattleSpellCast.subscribeBefore(EVENT_BUS, onBeforeSpellCast)
