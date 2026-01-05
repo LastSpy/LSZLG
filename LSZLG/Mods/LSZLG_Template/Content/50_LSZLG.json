@@ -30,7 +30,7 @@
 								{"min" : 2000, "max": 3000, "density": 12}
 								],
 					"customObjects": { 
-						"bannedObjects": { "shipyard": true },
+						"bannedObjects": {},
 						"commonObjects": [
 							{ "type": "core:dragonUtopia", "rmg": { "value": 10000, "rarity": 50, "zoneLimit": 2 } }
 										] 
