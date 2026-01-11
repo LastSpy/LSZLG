@@ -2,7 +2,7 @@
     "name" : "LSZLG Templates",
 
     "description" : "A vast, two-level continent designed for 8 warring factions. Players begin in sheltered but resource-poor starting zones, forcing early exploration into a ring of richer, guarded territories. As empires grow, they must delve underground and push towards a fiercely contested central nexus, where the greatest treasures and deadliest guardians await. Victory demands a balance of rapid expansion and strategic conquest.",
-    "depends" : ["newtown-terrains.spoiledLand","hota.mapDecorations","newtown-terrains.deadlandTerrain"],
+    "depends" : ["hota.mapDecorations"],
     "author" : "LastSpy",
 
     "contact" : "LastSpy",
@@ -14,13 +14,15 @@
  	    "21_LSZLG.JSON",
 	    "50_LSZLG.JSON",
 	    "26_LSZLG.JSON",
+	    "49_LSZLG.JSON",
 	    "45_LSZLG.JSON"
 	],
 
-	"version" : "1.1.2",
+	"version" : "1.1.4",
 
     "changelog" :
     {
+		"1.1.4"  : [ " Added 49_LSZLG.json"],
 		"1.1.3"	 : [ " Added 45_LSZLG.json",
 				"* [EXPERIMENTAL] 45_ can create 3 level"],
 		"1.1.2"  : [ "Fixed some incorrect generation settings in 50_LSZLG.json" ],
